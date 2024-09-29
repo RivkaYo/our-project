@@ -1,0 +1,17 @@
+.playerButton {
+    width: 200px;
+    height: 100px;
+    background-color: crimson
+};
+
+.playerButton:hover {
+    width: 230px;
+    width: 115px;
+    background-color:coral;
+};
+
+button:hover {
+    width: 230px;
+    width: 115px;
+    background-color:coral;
+};

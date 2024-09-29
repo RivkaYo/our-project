@@ -22,13 +22,15 @@ if(!localStorage.getItem("users"))
   function onSignSubmit(){
     let users=JSON.parse(localStorage.getItem("users"))
     let loggeduser=users.find(check);
-    let loggeduserindex = users.findIndex(check);
     console.log(loggeduser);
-    if (users.find(check)) {
-      console.log("yes");
-      document.getElementById("demo").innerHTML=users.username[loggeduserindex];
-      console.log(loggeduserindex);
+    
+    for(let j=0;j<users.length;j++) {
+      if (users.find(check)) {
+        document.getElementById("demo").innerHTML=loggeduser.username;
+      }
+
     }
+    
 
   }
 

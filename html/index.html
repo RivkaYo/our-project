@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css">
+    
 </head>
 <body>
     <header>fun games!</header>
@@ -12,20 +13,20 @@
         <div id = "login">
             <h2>log in</h2>
             <label for="username">username</label>
-            <input type="text" name="username" id="username" maxlength="20" minlength="2" required><br><br><br>
+            <input type="text" name="username" id="username" maxlength="20" minlength="2" required onchange="handleSignChange()"><br><br><br>
 
             <label for="password">password</label>
-            <input type="text" name="password" id="password" maxlength="20" minlength="2" required><br><br><br>
-            <button>submit</button>
+            <input type="text" name="password" id="password" maxlength="20" minlength="2" required onchange="handleSignChange()"><br><br><br>
+            <button onclick="onSignSubmit()">submit</button>
         </div>
         <div id = "signup">
             <h2>sign up</h2>
             <label for="username">username</label>
-            <input type="text" name="username" id="username" maxlength="20" minlength="2" required><br><br><br>
+            <input type="text" name="username" id="register-username" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br><br>
 
             <label for="password">password</label>
-            <input type="text" name="password" id="password" maxlength="20" minlength="2" required><br><br><br>
-            <button>submit</button>
+            <input type="text" name="password" id="register-password" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br><br>
+            <button onclick="onRegisterSubmit()" id="RegisterSubmit">submit</button>
         </div>
     </div>
     <div class = "container c2">
@@ -33,7 +34,8 @@
         <a href='#''></a><button>road trip</button></a>
     </div>
     
-    <aside>gollihlikl.p1<br> p2<br> p3<br> p4</aside>
+    <aside id = "demo"></aside>
     <footer></footer>
+    <script src="../js/index.js"></script>
 </body>
 </html>

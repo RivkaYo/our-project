@@ -11,22 +11,21 @@ const parseUsers = JSON.parse(jsonUsers);
 
 const currentUserName  = parseUsers[0].username;
 */
-<<<<<<< HEAD
 
-if (answer.length = 1){
+if (answer.length = 1) {
     function addClassBackgroundcolor() {
         var element = document.getElementById("imageContainer");
         element.classList.add("backgroundcolorRed");
     }
     console.log(answer.length);
-=======
+}
+
 //img and all
 let randomImgIndex;
 function getRandomImgIndex(array) {
     let randomImgIndex = Math.floor(Math.random() * array.length);
     console.log(randomImgIndex);
     return randomImgIndex;
->>>>>>> 920f9ee52c52712c6bb75e18dd8447a6417110b6
 }
 
 function showRandomImg() {
@@ -34,6 +33,7 @@ function showRandomImg() {
     const container = document.getElementById('imageContainer');
     const img = document.createElement('img');
     img.src = images[randomImgIndex];
+    img.classList.add("imgRandomDissappear");
     container.appendChild(img);
     return img;
 }
@@ -50,16 +50,19 @@ const addAnswer = function () {
     // let player1Answer = document.getElementById("playerAnswer").value;
 }
 
-if (!localStorage.getItem("imgObj"))
-    localStorage.setItem("imgObj", JSON.stringify([]))
-let imgObj;
+console.log("img", localStorage.getItem("imgSrc"));
+
+if (!localStorage.getItem("imgSrc"))
+    localStorage.setItem("imgSrc", JSON.stringify(""))
+
 
 function passImgToJudge() {
-    console.log(memoryMemeImg);
-    imgObj = {imgNum: 1, imgHerf:memoryMemeImg}
+    console.log(memoryMemeImg.src);
+    imgSrc = memoryMemeImg.src;
+    localStorage.setItem("imgSrc", imgSrc);
 
 }
-passImgToJudge();
+
 
 //document.getElementsByTagName("submit")[0].addEventListener("click", addAnswer);
 
@@ -80,24 +83,25 @@ function onInputPlayerSubmit() {
     console.log('element: ', element);
     console.log(answers.length)
 
-    if (answers.length%2 == 0) {
+    if (answers.length % 2 == 0) {
         element.classList.remove("backgroundcolorRed");
         element.classList.add("backgroundcolorBlue");
         console.log("bb")
-        location.href="judge.html"
+        location.href = "judge.html"
     }
     else {
         element.classList.remove("backgroundcolorBlue");
         element.classList.add("backgroundcolorRed");
         console.log("red")
     }
-  
-   /* if (answers.length%2 === 0 || answers.length !== 0){
-        
-        
-          
-    }*/
-    
+    passImgToJudge();
+
+    /* if (answers.length%2 === 0 || answers.length !== 0){
+         
+         
+           
+     }*/
+
 }
 
 

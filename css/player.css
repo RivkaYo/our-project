@@ -1,3 +1,14 @@
 h1 {
     display: flex;
-};
+}
+
+#imageContainer {
+    background-color: blueviolet;
+    border: 10px dotted black;
+    object-fit: cover;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}

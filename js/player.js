@@ -10,26 +10,16 @@ const jsonUsers = localStorage.getItem("users");
 const parseUsers = JSON.parse(jsonUsers);
 
 const currentUserName  = parseUsers[0].username;
-
-
-const players = [
-    {name: JSON.parse(localStorage.getItem("users"[0])),
-        score: 0,
-        isJudge: false,
-        currentAnswer: ""
-    },
-    {name: JSON.parse(localStorage.getItem("users"[1])),
-        score: 0,
-        isJudge: false,
-        currentAnswer: ""
-    },
-    {name: JSON.parse(localStorage.getItem("users"[2])),
-        score: 0,
-        isJudge: false,
-        currentAnswer: ""
-    }
-];
 */
+
+if (answer.length = 1) {
+    function addClassBackgroundcolor() {
+        var element = document.getElementById("imageContainer");
+        element.classList.add("backgroundcolorRed");
+    }
+    console.log(answer.length);
+}
+
 //img and all
 let randomImgIndex;
 function getRandomImgIndex(array) {
@@ -69,7 +59,7 @@ if (!localStorage.getItem("imgSrc"))
 function passImgToJudge() {
     console.log(memoryMemeImg.src);
     imgSrc = memoryMemeImg.src;
-    localStorage.setItem("imgSrc",imgSrc);
+    localStorage.setItem("imgSrc", imgSrc);
 
 }
 
@@ -93,11 +83,11 @@ function onInputPlayerSubmit() {
     console.log('element: ', element);
     console.log(answers.length)
 
-    if (answers.length%2 == 0) {
+    if (answers.length % 2 == 0) {
         element.classList.remove("backgroundcolorRed");
         element.classList.add("backgroundcolorBlue");
         console.log("bb")
-        location.href="judge.html"
+        location.href = "judge.html"
     }
     else {
         element.classList.remove("backgroundcolorBlue");
@@ -105,13 +95,13 @@ function onInputPlayerSubmit() {
         console.log("red")
     }
     passImgToJudge();
-  
-   /* if (answers.length%2 === 0 || answers.length !== 0){
-        
-        
-          
-    }*/
-    
+
+    /* if (answers.length%2 === 0 || answers.length !== 0){
+         
+         
+           
+     }*/
+
 }
 
 

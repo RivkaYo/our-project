@@ -4,6 +4,7 @@
     background-color: crimson
 };
 
+/*hover doesn't work*/
 .playerButton:hover {
     width: 230px;
     width: 115px;

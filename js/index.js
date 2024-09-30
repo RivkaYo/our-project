@@ -1,42 +1,61 @@
 localStorage.clear();
 
+//set up users
 if(!localStorage.getItem("users"))
   localStorage.setItem("users",JSON.stringify([]))
 
-let registerForm = {username:"",password:""};
+//let registerForm = {username:"",password:""};
 
+
+//Sign up
+//collect info
 function handleRegisterChange(){
-  registerForm={username:document.getElementById("register-username").value,password:document.getElementById("register-password").value}
+  registerForm = {
+    username:document.getElementById("register-username").value,
+    password:document.getElementById("register-password").value
+  }
 }
 
+//add sign up info to local storage
 function onRegisterSubmit(){
   let users=JSON.parse(localStorage.getItem("users"))
   localStorage.setItem("users",JSON.stringify([...users,registerForm]))
 }
 
+
+//log in
+
+//set up looged users
+if(!localStorage.getItem("loggedUsers"))
+  localStorage.setItem("loggedUsers",JSON.stringify([]))
+
+//collect login info
 let logForm = {};
-function handleLogChange(){
+function handleLogChange () {
   logForm = {
     username: document.getElementById("username").value,
     password: document.getElementById("password").value,
     isJudge: false,
     score: 0
   }
-  console.log(logForm);
+  return logForm;
 }
 
-function onLogSubmit(){
+//add current user info to local storage
+function onLogSubmit () {
   let users=JSON.parse(localStorage.getItem("users"))
-  let loggeduser=users.find(check);
+  let loggeduser=users.find(checkUsernamePasswordMatch);
   for(let j=0;j<users.length;j++) {
-    if (users.find(check)) {
-      document.getElementById("demo").innerHTML+=loggeduser.username;
+    if (users.find(checkUsernamePasswordMatch)) {
+      document.getElementById("aside").innerHTML+=loggeduser.username;
+      //
+      localStorage.setItem("loggedUsers",JSON.stringify([logForm]));
+      //
     }
   }
-  console.log(handleLogChange());
 }
 
-function check(user) {
+function checkUsernamePasswordMatch(user) {
   return user.username===logForm.username && logForm.password===user.password ;
 }
 

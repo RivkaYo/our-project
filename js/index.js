@@ -1,4 +1,4 @@
-localStorage.clear(); 
+//localStorage.clear(); 
 if(!localStorage.getItem("users"))
   localStorage.setItem("users",JSON.stringify([]))
 
@@ -13,29 +13,26 @@ if(!localStorage.getItem("users"))
     localStorage.setItem("users",JSON.stringify([...users,registerForm]))
   }
 
-  let signForm={username:"",password:""}
+  let logForm={username:"",password:""}
 
-  function handleSignChange(){
-  signForm={username:document.getElementById("username").value,password:document.getElementById("password").value}
+  function handleLogChange(){
+  logForm={username:document.getElementById("username").value,password:document.getElementById("password").value}
   }
 
-  function onSignSubmit(){
+  function onLogSubmit(){
     let users=JSON.parse(localStorage.getItem("users"))
     let loggeduser=users.find(check);
     console.log(loggeduser);
     
     for(let j=0;j<users.length;j++) {
       if (users.find(check)) {
-        document.getElementById("demo").innerHTML=loggeduser.username;
+        document.getElementById("demo").innerHTML+=loggeduser.username;
       }
-
     }
-    
-
   }
 
 function check(user) {
-  return user.username===signForm.username && signForm.password===user.password ;
+  return user.username===logForm.username && logForm.password===user.password ;
 }
   /*function readUsername() {
     

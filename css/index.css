@@ -5,6 +5,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr auto;
     grid-template-rows: 10% 1fr 25%;
+    color: black;
 }
 
 header {
@@ -12,7 +13,7 @@ header {
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: rgb(221, 93, 28);
+    background-color: rgb(73, 84, 180);
 }
 .container {
     display: flex;
@@ -24,19 +25,42 @@ header {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: rgb(0, 255, 30);
+    background-color: rgb(150, 145, 219);
 }
 .c2 {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
-    background-color: rgb(255, 0, 234);
+    background-color: rgb(140, 125, 224);
 }
 aside {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: rgb(238, 255, 0);
+    background-color: rgb(116, 80, 214);
+}
+
+.submit {
+    border: 4px dotted black;
+    border-radius: 5%;
+    width: 200px;
+    height: 70px;
+    background-color: rgb(134, 134, 134);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.submit:hover {
+    background-color: aliceblue;
+}
+
+.enterType {
+    border: 6px dotted black;
+    border-radius: 5%;
+    padding-left: 130px;
+    padding-right: 130px;
+    margin: 20px;
+
 }

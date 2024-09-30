@@ -1,4 +1,4 @@
-export const memes = [
+const memes = [
     "https://i.pinimg.com/736x/25/2a/04/252a045199e33164a8b7577fc001851a.jpg",
     "https://i.imgflip.com/4/1g8my4.jpg",
     "https://wallpapers.com/images/hd/blank-meme-pictures-604-x-919-tn3g9s6zzjsqeu6o.jpg",

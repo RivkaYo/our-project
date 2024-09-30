@@ -1,8 +1,16 @@
+#playersContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+}
+
 .playerButton {
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
     background-color: rgb(182, 71, 93);
     border: 4px dotted black;
+    margin: 30px;
 };
 
 /*hover doesn't work*/

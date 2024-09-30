@@ -30,6 +30,25 @@ const players = [
     }
 ];
 */
+//img and all
+let randomImgIndex;
+function getRandomImgIndex(array) {
+    let randomImgIndex = Math.floor(Math.random() * array.length);
+    console.log(randomImgIndex);
+    return randomImgIndex;
+}
+
+function showRandomImg() {
+    let randomImgIndex = getRandomImgIndex(images)
+    const container = document.getElementById('imageContainer');
+    const img = document.createElement('img');
+    img.src = images[randomImgIndex];
+    container.appendChild(img);
+    return img;
+}
+
+let memoryMemeImg = showRandomImg();
+console.log(memoryMemeImg);
 
 
 
@@ -39,6 +58,18 @@ let playerAnswer = {}
 const addAnswer = function () {
     // let player1Answer = document.getElementById("playerAnswer").value;
 }
+
+if (!localStorage.getItem("imgObj"))
+    localStorage.setItem("imgObj", JSON.stringify([]))
+let imgObj;
+
+function passImgToJudge() {
+    console.log(memoryMemeImg);
+    imgObj = {imgNum: 1, imgHerf:memoryMemeImg}
+
+}
+passImgToJudge();
+
 //document.getElementsByTagName("submit")[0].addEventListener("click", addAnswer);
 
 if (!localStorage.getItem("answer"))

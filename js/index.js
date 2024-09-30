@@ -49,7 +49,9 @@ function onLogSubmit() {
   let loggeduser = users.find(checkUsernamePasswordMatch);
   for (let j = 0; j < users.length; j++) {
     if (users.find(checkUsernamePasswordMatch)) {
-      document.getElementById("aside").innerHTML += loggeduser.username;
+
+      document.getElementById("aside").innerHTML += "<br>" + loggeduser.username;
+      
       //
       const loggedUsers = JSON.parse(localStorage.getItem("loggedUsers"));
       console.log('loggedUsers: ', loggedUsers[0].username);

@@ -1,7 +1,8 @@
 .playerButton {
     width: 200px;
     height: 100px;
-    background-color: crimson
+    background-color: rgb(182, 71, 93);
+    border: 4px dotted black;
 };
 
 /*hover doesn't work*/

@@ -1,6 +1,9 @@
-//localStorage.clear(); 
+localStorage.clear();
+
 if(!localStorage.getItem("users"))
   localStorage.setItem("users",JSON.stringify([]))
+
+console.log(memes)
 
   let registerForm={username:"",password:""}
 
@@ -22,8 +25,6 @@ if(!localStorage.getItem("users"))
   function onLogSubmit(){
     let users=JSON.parse(localStorage.getItem("users"))
     let loggeduser=users.find(check);
-    console.log(loggeduser);
-    
     for(let j=0;j<users.length;j++) {
       if (users.find(check)) {
         document.getElementById("demo").innerHTML+=loggeduser.username;
@@ -34,6 +35,7 @@ if(!localStorage.getItem("users"))
 function check(user) {
   return user.username===logForm.username && logForm.password===user.password ;
 }
+
   /*function readUsername() {
     
     var x = localStorage.getItem("username");

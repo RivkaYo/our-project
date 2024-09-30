@@ -1,5 +1,12 @@
+body{
+    margin: 0%;
+}
 h1 {
     display: flex;
+}
+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #imageContainer {
@@ -7,8 +14,28 @@ h1 {
     border: 10px dotted black;
     object-fit: cover;
 }
+.backgroundcolorRed {
+    background-color: red;
+}
+.backgroundcolorBlue {
+    background-color: blue;
+}
 
 img {
-    width: 200px;
-    height: 200px;
+    /*width: 200px;*/
+    height: 400px;
+}
+.player1, .player2{
+    padding: 15px;
+    width: 50%;
+}
+.player1{
+    background-color: red;
+    border: 10px solid rgb(141, 2, 2);
+  
+}
+
+.player2{
+    background-color: blue;
+    border: 10px solid rgb(2, 5, 152);
 }

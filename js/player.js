@@ -1,4 +1,4 @@
-
+localStorage.clear();
 /*
 let meme = document.getElementById('meme');
 
@@ -30,19 +30,12 @@ const players = [
     }
 ];
 */
-if (answer.length = 1){
-    function addClassBackgroundcolor() {
-        var element = document.getElementById("imageContainer");
-        element.classList.add("backgroundcolorRed");
-    }
-    console.log(answer.length);
-}
 
 
 
 //save player1's answer (value) to a vareable.
 
-
+let playerAnswer = {}
 const addAnswer = function () {
     // let player1Answer = document.getElementById("playerAnswer").value;
 }
@@ -52,16 +45,31 @@ if (!localStorage.getItem("answer"))
     localStorage.setItem("answer", JSON.stringify([]))
 
 //let playerAnswer={player"1",answer:"2"}
-let playerAnswers = {};
 function handleInputPlayer() {
-    let playerAnswer = { player: "1", answer: document.getElementById("playerAnswer").value }
+    playerAnswer = { player: "1", answer: document.getElementById("playerAnswer").value }
     console.log(playerAnswer.answer);
-    localStorage.setItem("answer", JSON.stringify(playerAnswer))
 }
 
 function onInputPlayerSubmit() {
-    let answer = JSON.parse(localStorage.getItem("answer"))
-    localStorage.setItem("answer", JSON.stringify([...answer, playerAnswer]))
+    let answers = JSON.parse(localStorage.getItem("answer")) || []
+    let newAnswers = [...answers, playerAnswer]
+    localStorage.setItem("answer", JSON.stringify(newAnswers))
+    let element = document.getElementById("imageContainer");
+    console.log('element: ', element);
+    console.log(answers.length)
+    if (answers.length%2 == 0) {
+        element.classList.remove("backgroundcolorRed");
+        element.classList.add("backgroundcolorBlue");
+        console.log("bb")
+    }
+    else {
+        element.classList.remove("backgroundcolorBlue");
+        element.classList.add("backgroundcolorRed");
+        console.log("red")
+    }
+   
+    
+    
 }
 
 //אם היטוזרניימ הוא אותו יוזרניימ אז תכניס את התשובה לתוך המערך יוזרס הגדול

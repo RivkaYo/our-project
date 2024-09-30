@@ -10,26 +10,8 @@ const jsonUsers = localStorage.getItem("users");
 const parseUsers = JSON.parse(jsonUsers);
 
 const currentUserName  = parseUsers[0].username;
-
-
-const players = [
-    {name: JSON.parse(localStorage.getItem("users"[0])),
-        score: 0,
-        isJudge: false,
-        currentAnswer: ""
-    },
-    {name: JSON.parse(localStorage.getItem("users"[1])),
-        score: 0,
-        isJudge: false,
-        currentAnswer: ""
-    },
-    {name: JSON.parse(localStorage.getItem("users"[2])),
-        score: 0,
-        isJudge: false,
-        currentAnswer: ""
-    }
-];
 */
+
 if (answer.length = 1){
     function addClassBackgroundcolor() {
         var element = document.getElementById("imageContainer");

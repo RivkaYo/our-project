@@ -32,22 +32,3 @@ const images = ['https://i.pinimg.com/736x/25/2a/04/252a045199e33164a8b7577fc001
     'https://static.gameloop.com/img/e7de10c8dec6e9ad6ee900ef32a1b785.png?imageMogr2/thumbnail/172.8x172.8/format/webp'
             ];
   
-let randomImgIndex;
-function getRandomImgIndex(array) {
-    let randomImgIndex = Math.floor(Math.random() * array.length);
-    console.log(randomImgIndex);
-    return randomImgIndex;
-}
-
-function showRandomImg() {
-    let randomImgIndex = getRandomImgIndex(images)
-    const container = document.getElementById('imageContainer');
-    const img = document.createElement('img');
-    img.src = images[randomImgIndex];
-    container.appendChild(img);
-    return img;
-}
-
-let memoryMemeImg = showRandomImg();
-console.log(memoryMemeImg);
-

@@ -26,12 +26,13 @@ const makeJudge = event => {
 }
 
 console.log('getElementsByClassName: ', document.getElementsByClassName("playerButton"));
-document.getElementsByClassName("playerButton").forEach(element => {
-    element.addEventListener("click", makeJudge);
-});
+// document.getElementsByClassName("playerButton").forEach(element => {
+//     element.addEventListener("click", makeJudge);
+// });
 
-for(let i = 0; i > 3; i++) {
-    element.addEventListener("click", makeJudge);
+const playerElements = document.getElementsByClassName("playerButton")
+for(let i = 0; i < playerElements.length; i++) {
+    playerElements[i].addEventListener("click", makeJudge);
 }
 
 

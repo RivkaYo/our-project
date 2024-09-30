@@ -9,8 +9,8 @@ div {
     margin-bottom: 20px;
 }
 
-#imageContainer {
-    background-color: blueviolet;
+.imageContainer {
+    background-color: blue;
     border: 10px dotted black;
     object-fit: cover;
 }

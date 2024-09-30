@@ -1,4 +1,4 @@
-import { memes } from './photos';
+// import { memes } from './photos';
 
 console.log("hi boaz");
 
@@ -10,33 +10,36 @@ const chooseMeme = () => {
 
 let meme = document.getElementById('meme');
 
-chooseMeme();
+// chooseMeme();
+let users=JSON.parse(localStorage.getItem("users"))
 
 //players as list of odjects
 let players = [
-    player1 = {name: document.getElementById("demo").innerHTML=loggeduser.username,
-    score: 0,
-    isJudge: false
+    player1 = {name: "",
+        password: "",
+        score: 0,
+        isJudge: false
     },
     player2 = {name: document.getElementById("demo").innerHTML=loggeduser.username,
-    score: 0,
-    isJudge: false
+        password: "",
+        score: 0,
+        isJudge: false
     },
     player3 = {name: document.getElementById("demo").innerHTML=loggeduser.username,
-    score: 0,
-    isJudge: false
-    },
+        password: "",
+        score: 0,
+        isJudge: false
+    }
 ];
 
 //need to set img crs at player.html to chooseMeme
-Img.src = chooseMeme();
+// document["meme"].src = chooseMeme();
 
 //save player1's answer (value) to a vareable.
 
 
-document.getElementsByTagName(submit).addEventListener("click", addAnswer);
-
 const addAnswer = function() {
-    let player1Answer = document.getElementById("playerAnswer").value;
+    // let player1Answer = document.getElementById("playerAnswer").value;
     console.log(player1Answer);
 }
+document.getElementsByTagName("submit")[0].addEventListener("click", addAnswer);

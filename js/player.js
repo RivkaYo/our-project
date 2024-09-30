@@ -1,4 +1,4 @@
-localStorage.clear();
+//localStorage.clear();
 /*
 let meme = document.getElementById('meme');
 
@@ -57,19 +57,26 @@ function onInputPlayerSubmit() {
     let element = document.getElementById("imageContainer");
     console.log('element: ', element);
     console.log(answers.length)
+
     if (answers.length%2 == 0) {
         element.classList.remove("backgroundcolorRed");
         element.classList.add("backgroundcolorBlue");
         console.log("bb")
+        location.href="judge.html"
     }
     else {
         element.classList.remove("backgroundcolorBlue");
         element.classList.add("backgroundcolorRed");
         console.log("red")
     }
-   
-    
+  
+   /* if (answers.length%2 === 0 || answers.length !== 0){
+        
+        
+          
+    }*/
     
 }
+
 
 //אם היטוזרניימ הוא אותו יוזרניימ אז תכניס את התשובה לתוך המערך יוזרס הגדול

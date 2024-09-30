@@ -43,6 +43,7 @@ function showRandomImg() {
     const container = document.getElementById('imageContainer');
     const img = document.createElement('img');
     img.src = images[randomImgIndex];
+    img.classList.add("imgRandomDissappear");
     container.appendChild(img);
     return img;
 }
@@ -59,16 +60,19 @@ const addAnswer = function () {
     // let player1Answer = document.getElementById("playerAnswer").value;
 }
 
-if (!localStorage.getItem("imgObj"))
-    localStorage.setItem("imgObj", JSON.stringify([]))
-let imgObj;
+console.log("img", localStorage.getItem("imgSrc"));
+
+if (!localStorage.getItem("imgSrc"))
+    localStorage.setItem("imgSrc", JSON.stringify(""))
+
 
 function passImgToJudge() {
-    console.log(memoryMemeImg);
-    imgObj = {imgNum: 1, imgHerf:memoryMemeImg}
+    console.log(memoryMemeImg.src);
+    imgSrc = memoryMemeImg.src;
+    localStorage.setItem("imgSrc",imgSrc);
 
 }
-passImgToJudge();
+
 
 //document.getElementsByTagName("submit")[0].addEventListener("click", addAnswer);
 
@@ -100,6 +104,7 @@ function onInputPlayerSubmit() {
         element.classList.add("backgroundcolorRed");
         console.log("red")
     }
+    passImgToJudge();
   
    /* if (answers.length%2 === 0 || answers.length !== 0){
         

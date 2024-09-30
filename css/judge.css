@@ -1,3 +1,6 @@
 #imageContainer {
     background-color: blueviolet;
 }
+.dissappear {
+    display: none;
+}

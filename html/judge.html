@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,29 @@
     <link href="../css/player.css" rel="stylesheet">
     <link href="../css/judge.css" rel="stylesheet">
 </head>
+
 <body>
     <h1>
-        <div class="player1" onclick="score()">player1-username Score: 0</div>
-        <div class="player2" onclick="score()">player2-username Score: 0</div>
+        <div class="player1"><span>player1-username</span><span id="player1-score">Score: 0</span></div>
+        <div class="player2"><span>player2-username</span><span id="player2-score">Score: 0</span></div>
     </h1>
     <div id="imageContainer" class="imageContainer"></div>
-    <div>"Choose!"</div>
     <!--<input id="judgeScore"><br>-->
+
+    <h3>choose a winner!</h3><br>
+  <input type="radio" id="player1-radio" name="winnweround" value="redp" onclick="score(event)">
+  <label for="player1-radio" id="player1-radioAnswer"></label>
+  <input type="radio" id="player2-radio" name="winnweround" value="bluep" onclick="score(event)">
+  <label for="player2-radio" id="player2-radioAnswer"></label><br>
+    
+
     <a href="player.html"><button id="submit">Submit Answer</button></a>
 
-    
+
     <script src="../js/photos.js"></script>
     <script src="../js/player.js"></script>
     <script src="../js/judge.js"></script>
-    
+
 </body>
+
 </html>

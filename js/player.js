@@ -12,13 +12,13 @@ const parseUsers = JSON.parse(jsonUsers);
 const currentUserName  = parseUsers[0].username;
 */
 
-if (answer.length = 1) {
-    function addClassBackgroundcolor() {
-        var element = document.getElementById("imageContainer");
-        element.classList.add("backgroundcolorRed");
-    }
-    console.log(answer.length);
-}
+// if (answer.length = 1) {
+//     function addClassBackgroundcolor() {
+//         var element = document.getElementById("imageContainer");
+//         element.classList.add("backgroundcolorRed");
+//     }
+//     console.log(answer.length);
+// }
 
 //img and all
 let randomImgIndex;
@@ -45,7 +45,7 @@ console.log(memoryMemeImg);
 
 //save player1's answer (value) to a vareable.
 
-let playerAnswer = {}
+
 const addAnswer = function () {
     // let player1Answer = document.getElementById("playerAnswer").value;
 }
@@ -82,6 +82,7 @@ function onInputPlayerSubmit() {
     let element = document.getElementById("imageContainer");
     console.log('element: ', element);
     console.log(answers.length)
+    
 
     if (answers.length % 2 == 0) {
         element.classList.remove("backgroundcolorRed");

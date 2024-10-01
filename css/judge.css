@@ -2,5 +2,5 @@
     background-color: blueviolet;
 }
 .dissappear {
-    display: none;
+    opacity: 0;
 }

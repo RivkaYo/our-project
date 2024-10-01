@@ -45,13 +45,21 @@ function dissappearImg() {
 }
 dissappearImg()
 
-let scorenumplayer1 = 0;
-let scorenumplayer2 = 0;
+
+if (!localStorage.getItem("score"))
+    localStorage.setItem("score", JSON.stringify([]))
+
+
+let scorenumplayer1 = JSON.parse(localStorage.getItem())[0].score;
+let scorenumplayer2 = JSON.parse(localStorage.getItem())[1].score;
+//let score = JSON.parse(localStorage.getItem("score"))
+
 
 function score({target}) {
     if(target.id.includes("player1")){
         scorenumplayer1++
         player1Score.innerHTML= "Score: " + scorenumplayer1;
+        localStorage.setItem("Score",JSON.stringify(scorenumplayer1))
     }
     if(target.id.includes("player2")){
         scorenumplayer2++
@@ -59,5 +67,22 @@ function score({target}) {
     }
 }
 
-//score.update();
 
+
+//function handleScorePlayer() {
+   // playerScore = { player: "1", score: document.getElementById("playerScore").value }
+    //console.log(playerScore.score);
+//}
+/*
+function handleRegisterChange() {
+    registerForm = {
+      username: document.getElementById("register-username").value,
+      password: document.getElementById("register-password").value
+    }
+  }
+  
+  //add sign up info to local storage
+  function onRegisterSubmit() {
+    let users = JSON.parse(localStorage.getItem("users"))
+    localStorage.setItem("users", JSON.stringify([...users, registerForm]))
+  }*/

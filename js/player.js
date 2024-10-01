@@ -46,10 +46,6 @@ console.log(memoryMemeImg);
 //save player1's answer (value) to a vareable.
 
 
-const addAnswer = function () {
-    // let player1Answer = document.getElementById("playerAnswer").value;
-}
-
 console.log("img", localStorage.getItem("imgSrc"));
 
 if (!localStorage.getItem("imgSrc"))

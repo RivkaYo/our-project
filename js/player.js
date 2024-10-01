@@ -1,16 +1,3 @@
-//localStorage.clear();
-/*
-let meme = document.getElementById('meme');
-
-//chooseMeme();
-let users=JSON.parse(localStorage.getItem("users"))
-
-const jsonUsers = localStorage.getItem("users");
-
-const parseUsers = JSON.parse(jsonUsers);
-
-const currentUserName  = parseUsers[0].username;
-*/
 
 if (answer.length = 1) {
     function addClassBackgroundcolor() {
@@ -44,7 +31,6 @@ console.log(memoryMemeImg);
 
 
 //save player1's answer (value) to a vareable.
-
 let playerAnswer = {}
 const addAnswer = function () {
     // let player1Answer = document.getElementById("playerAnswer").value;
@@ -63,8 +49,6 @@ function passImgToJudge() {
 
 }
 
-
-//document.getElementsByTagName("submit")[0].addEventListener("click", addAnswer);
 
 if (!localStorage.getItem("answer"))
     localStorage.setItem("answer", JSON.stringify([]))
@@ -103,6 +87,5 @@ function onInputPlayerSubmit() {
      }*/
 
 }
-
 
 //אם היטוזרניימ הוא אותו יוזרניימ אז תכניס את התשובה לתוך המערך יוזרס הגדול

@@ -7,7 +7,8 @@ if (!localStorage.getItem("users"))
 //let registerForm = {username:"",password:""};
 
 
-//Sign up
+//--------------------------------------Sign up--------------------------------------
+
 //collect info
 function handleRegisterChange() {
   registerForm = {
@@ -23,7 +24,7 @@ function onRegisterSubmit() {
 }
 
 
-//log in
+//--------------------------------------log in--------------------------------------
 
 //set up looged users
 if (!localStorage.getItem("loggedUsers"))
@@ -60,6 +61,7 @@ function onLogSubmit() {
   // }
 }
 
+//validate
 function checkUsernamePasswordMatch(user) {
   return user.username === logForm.username && logForm.password === user.password;
 }

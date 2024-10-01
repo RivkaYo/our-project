@@ -108,3 +108,11 @@ function onInputPlayerSubmit() {
 }
 
 //אם היטוזרניימ הוא אותו יוזרניימ אז תכניס את התשובה לתוך המערך יוזרס הגדול
+const changeToPlayerUsername = (player, playerIndex) => {
+    let playerUsername = JSON.parse(localStorage.getItem("loggedUsers"))[playerIndex]?.username
+    document.getElementById(player).innerHTML = playerUsername; 
+}
+
+changeToPlayerUsername("player1", 0);
+changeToPlayerUsername("player2", 1);
+

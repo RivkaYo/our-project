@@ -1,19 +1,26 @@
 let player1Score=document.getElementById("player1-score")
 let player2Score=document.getElementById("player2-score")
 
-let radioAnswer = JSON.parse(localStorage.getItem("answer"))
+function updateScore() {
 
-console.log(radioAnswer[0].answer);
-console.log(radioAnswer[1].answer);
+    //let randomAnswer = 0;
+    let radioAnswer = JSON.parse(localStorage.getItem("answer"))
 
-let player1Aanswer = radioAnswer[0].answer;
-let player2Aanswer = radioAnswer[1].answer;
+    console.log(radioAnswer[0].answer);
+    console.log(radioAnswer[1].answer);
 
-let player1RadioAnswer=document.getElementById("player1-radioAnswer")
-player1RadioAnswer.innerHTML = player1Aanswer;
+    let player1Aanswer = radioAnswer[0].answer;
+    let player2Aanswer = radioAnswer[1].answer;
 
-let player2RadioAnswer=document.getElementById("player2-radioAnswer")
-player2RadioAnswer.innerHTML = player2Aanswer;
+    let player1RadioAnswer=document.getElementById("player1-radioAnswer")
+    player1RadioAnswer.innerHTML = player1Aanswer;
+
+    let player2RadioAnswer=document.getElementById("player2-radioAnswer")
+    player2RadioAnswer.innerHTML = player2Aanswer;
+    localStorage.setItem("answer", "")
+} 
+updateScore();
+
 
 
 

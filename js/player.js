@@ -86,15 +86,19 @@ function onInputPlayerSubmit() {
         element.classList.remove("backgroundcolorRed");
         element.classList.add("backgroundcolorBlue");
         console.log("bb")
-        location.href = "judge.html"
+        
+        
     }
     else {
         element.classList.remove("backgroundcolorBlue");
         element.classList.add("backgroundcolorRed");
         console.log("red")
+        if (answers.length >= 1){
+            location.href = "judge.html"
+        }
+        
     }
     passImgToJudge();
-
     /* if (answers.length%2 === 0 || answers.length !== 0){
          
          

@@ -31,5 +31,24 @@ button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 47px 70px 0 rgba(0,0,0,0.19);
 }
 
+#startButton {
+    text-decoration: none;
+    color:antiquewhite;
+    font-size: 1.5em;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(44, 26, 209);
+    border: 5px, dotted antiquewhite;
+    padding: 10px;
+}
+
+#startButton:hover{
+    color:antiquewhite;
+    font-size: 1.7em;
+    width: 350px;
+    height: 120px;
+    background-color: rgb(101, 89, 207);
+}
+
 
 

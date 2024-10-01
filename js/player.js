@@ -64,8 +64,6 @@ function passImgToJudge() {
 }
 
 
-//document.getElementsByTagName("submit")[0].addEventListener("click", addAnswer);
-
 if (!localStorage.getItem("answer"))
     localStorage.setItem("answer", JSON.stringify([]))
 
@@ -104,6 +102,5 @@ function onInputPlayerSubmit() {
      }*/
 
 }
-
 
 //אם היטוזרניימ הוא אותו יוזרניימ אז תכניס את התשובה לתוך המערך יוזרס הגדול

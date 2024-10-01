@@ -1,4 +1,4 @@
-localStorage.loggedUsers.clear();
+localStorage.clear();
 
 //set up users
 if (!localStorage.getItem("users"))

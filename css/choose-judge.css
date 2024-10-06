@@ -42,7 +42,7 @@ button:hover {
     padding: 10px;
 }
 
-#startButton:hover{
+#startButton:hover {
     color:antiquewhite;
     font-size: 1.7em;
     width: 350px;
@@ -50,5 +50,7 @@ button:hover {
     background-color: rgb(101, 89, 207);
 }
 
-
+#afterChooseText {
+    display: none;
+}
 

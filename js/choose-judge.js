@@ -4,6 +4,7 @@ const changeOnHover = () => {
 };
 
 //set player1 to player's username
+
 const changeToPlayerUsername = (player, playerIndex) => {
     let playerUsername = JSON.parse(localStorage.getItem("loggedUsers"))[playerIndex]?.username
     document.getElementById(player).innerHTML = playerUsername; 
@@ -18,16 +19,19 @@ const makeJudge = event => {
     let playerNum = event.target.id;
     //doesn't update is judge in local storage
     let players = JSON.parse(localStorage.getItem("loggedUsers"));
-
+    let playerIndex;
     if (playerNum === "player1") {
-        players[0].isJudge = true;
-
+        playerIndex = 0;
     } else if (playerNum === "player2") {
-        players[1].isJudge = true;
+        playerIndex = 1;
 
     } else if (playerNum === "player3") {
-        players[2].isJudge = true;
+        playerIndex = 2;  
     }
+
+    players[playerIndex].isJudge = true;
+    
+    document.getElementById("afterChooseText").style.display="block";
 
     localStorage.setItem("loggedUsers", JSON.stringify(players));
 }

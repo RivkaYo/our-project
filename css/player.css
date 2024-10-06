@@ -10,7 +10,7 @@ div {
 }
 
 .imageContainer {
-    background-color: blue;
+    background-color: red;
     border: 10px dotted black;
     object-fit: cover;
 }

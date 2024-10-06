@@ -46,10 +46,6 @@ console.log(memoryMemeImg);
 //save player1's answer (value) to a vareable.
 
 
-const addAnswer = function () {
-    // let player1Answer = document.getElementById("playerAnswer").value;
-}
-
 console.log("img", localStorage.getItem("imgSrc"));
 
 if (!localStorage.getItem("imgSrc"))
@@ -86,15 +82,19 @@ function onInputPlayerSubmit() {
         element.classList.remove("backgroundcolorRed");
         element.classList.add("backgroundcolorBlue");
         console.log("bb")
-        location.href = "judge.html"
+        
+        
     }
     else {
         element.classList.remove("backgroundcolorBlue");
         element.classList.add("backgroundcolorRed");
         console.log("red")
+        if (answers.length >= 1){
+            location.href = "judge.html"
+        }
+        
     }
     passImgToJudge();
-
     /* if (answers.length%2 === 0 || answers.length !== 0){
          
          
@@ -104,3 +104,11 @@ function onInputPlayerSubmit() {
 }
 
 //אם היטוזרניימ הוא אותו יוזרניימ אז תכניס את התשובה לתוך המערך יוזרס הגדול
+const changeToPlayerUsername = (player, playerIndex) => {
+    let playerUsername = JSON.parse(localStorage.getItem("loggedUsers"))[playerIndex]?.username
+    document.getElementById(player).innerHTML = playerUsername; 
+}
+
+changeToPlayerUsername("player1", 0);
+changeToPlayerUsername("player2", 1);
+

@@ -3,8 +3,7 @@ const changeOnHover = () => {
     height = 200;
 };
 
-//set player1 to player's username
-
+//set player to player's username
 const changeToPlayerUsername = (player, playerIndex) => {
     let playerUsername = JSON.parse(localStorage.getItem("loggedUsers"))[playerIndex]?.username
     document.getElementById(player).innerHTML = playerUsername; 
